@@ -1,35 +1,55 @@
 /**
+Mini Challenge:
+Move the `header` element from Page into 
+its own component called "Header"
+*/
+/**
 Challenge: 
 
-Part 2: 
-- Add a `header` element with a nested `nav` element. Inside the `nav`,
-  include a `img` element with the image of the React logo inside
-  (src="./react-logo.png") and make sure to set the width to something
-  more manageable so it doesn't take up the whole screen
-- Add an `h1` with some text describing the page. (E.g. "Reasons
-  I'm excited to learn React"). Place it above the ordered list.
-- Add a `footer` after the list that says: 
-    "© 20xx <last name here> development. All rights reserved."
- */
+- Move the `footer` into its own component called "Footer" 
+  and render that component inside the Page component.
+- Move the `h1` and `ol` together into another component
+  called "MainContent" and render inside Page as well.
+*/
 
 function Page() {
     return (
         <div>
-            <header>
-                <nav>
-                    <img src="./react-logo.png" alt="React Logo" width="40px" />
-                </nav>
-            </header>
+            <Header />
+            <MainContent />
+            <Footer />
+        </div>
+    )
+}
+
+
+
+function Header() {
+    return (
+        <header>
+            <nav>
+                <img src="./react-logo.png" alt="React Logo" width="40px" />
+            </nav>
+        </header>
+    )
+}
+function MainContent() {
+    return (
+        <div>
             <h1>Reasons I'm excited to learn React</h1>
             <ol>
                 <li>I can begin working on my personal project</li>
                 <li>I can learn something new</li>
                 <li>I can be more efficient by using React</li>
             </ol>
-            <footer>
-                <small>© 2024 Espedal development. All rights reserved.</small>
-            </footer>
         </div>
+    )
+}
+function Footer() {
+    return (
+        <footer>
+            <small>© 2024 Espedal development. All rights reserved.</small>
+        </footer>
     )
 }
 
