@@ -1,4 +1,26 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    border: red solid 1px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: green solid 1px;
+}
+
+.nav-items>li {
+    padding: 10px;
+}
+
+.nav-img {
+    width: 60px;
 }
