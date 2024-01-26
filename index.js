@@ -1,30 +1,23 @@
-/*
-Challenge: Starting from scratch, build and render the 
-HTML for our section project. Check the Google slide for 
-what you're trying to build.
+/**
+Challenge: 
 
-We'll be adding styling to it later.
+Part 1: Create a page of your own using a custom Page component
 
-Hints:
-* The React logo is a file in the project tree, so you can
-  access it by using `src="./react-logo.png" in your image
-  element
-* You can also set the `width` attribute of the image element
-  just like in HTML. In the slide, I have it set to 40px
+It should return an ordered list with the reasons why you're
+excited to be learning React :)
+
+Render your list to the page
+
  */
 
-const page = (
-    <div>
-        <img src="./react-logo.png" width="40px" alt="React Logo" />
-        <h1>Fun facts about React</h1>
-        <ul>
-            <li>Was first released in 2013</li>
-            <li>Was originally created by Jordan Walke</li>
-            <li>Has well over 100K stars on Github</li>
-            <li>Is maintained by Facebook</li>
-            <li>Powers thousands of enterprise apps, including mobile apps</li>
-        </ul>
-    </div>
-)
+function OrderedList() {
+    return (
+        <ol>
+            <li>I can begin working on my personal project</li>
+            <li>I can learn something new</li>
+            <li>I can be more efficient by using React</li>
+        </ol>
+    )
+}
 
-ReactDOM.render(page, document.getElementById("root"))
+ReactDOM.render(<OrderedList />, document.getElementById("root"))
