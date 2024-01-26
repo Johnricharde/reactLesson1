@@ -1,24 +1,30 @@
-/* 
-Challenge: 
+/*
+Challenge: Starting from scratch, build and render the 
+HTML for our section project. Check the Google slide for 
+what you're trying to build.
 
-Create a navbar in JSX:
-    - Use the semantic `nav` element as the parent wrapper
-    - Have an h1 element with the brand name of your "website"
-    - Insert an unordered list for the other nav elements
-        - Inside the `ul`, have three `li`s for "Pricing",
-        "About", and "Contact"
-    - Don't worry about styling yet - it'll just be plain-looking HTML for now
-*/
+We'll be adding styling to it later.
 
-const navbar = (
-    <nav>
-        <h1>website</h1>
+Hints:
+* The React logo is a file in the project tree, so you can
+  access it by using `src="./react-logo.png" in your image
+  element
+* You can also set the `width` attribute of the image element
+  just like in HTML. In the slide, I have it set to 40px
+ */
+
+const page = (
+    <div>
+        <img src="./react-logo.png" width="40px" alt="React Logo" />
+        <h1>Fun facts about React</h1>
         <ul>
-            <li>Pricing</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li>Was first released in 2013</li>
+            <li>Was originally created by Jordan Walke</li>
+            <li>Has well over 100K stars on Github</li>
+            <li>Is maintained by Facebook</li>
+            <li>Powers thousands of enterprise apps, including mobile apps</li>
         </ul>
-    </nav>
+    </div>
 )
 
-ReactDOM.render(navbar, document.getElementById("root"))
+ReactDOM.render(page, document.getElementById("root"))
